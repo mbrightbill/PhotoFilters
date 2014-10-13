@@ -16,7 +16,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var delegate: GalleryDelegate? // whatever this thing is, It will conform to this mysampledelegate protocol
+    var delegate: GalleryDelegate? // whatever this thing is, It will conform to this GalleryDelegate protocol
     
     var images = [UIImage]()
     
@@ -50,7 +50,6 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GALLERY_CELL", forIndexPath: indexPath) as GalleryCell
-        //cell.backgroundColor = UIColor.purpleColor()
         cell.imageView.image = self.images[indexPath.row]
         return cell
         

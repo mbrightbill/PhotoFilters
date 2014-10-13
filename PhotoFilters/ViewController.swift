@@ -14,13 +14,10 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
     @IBOutlet weak var imageViewMain: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var image = UIImage(named: "photo2.jpg") // don't need .png for pngs
-        println(image.description)
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
 
-
+    //prepare for segue outside of any selecting
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SHOW_GALLERY" {
             let destinationVC = segue.destinationViewController as GalleryViewController
@@ -33,6 +30,7 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
         let alertController = UIAlertController(title: nil, message: "Choose an option", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let galleryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) { (action) -> Void in
+            //perform when this action gets called (upon selecting)
             self.performSegueWithIdentifier("SHOW_GALLERY", sender: self)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in

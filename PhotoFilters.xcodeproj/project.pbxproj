@@ -129,6 +129,7 @@
 		D56C134A19EC34AA00BBA749 /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */,
 				D56C132A19EC347D00BBA749 /* ViewController.swift */,
 			);
 			name = "Controller Layer";
@@ -138,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				D56C133119EC347D00BBA749 /* LaunchScreen.xib */,
-				D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */,
 				D56C134E19EC422300BBA749 /* GalleryCell.swift */,
 				D56C132C19EC347D00BBA749 /* Main.storyboard */,
 			);
@@ -445,6 +445,7 @@
 				D56C134419EC347D00BBA749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56C134519EC347D00BBA749 /* Build configuration list for PBXNativeTarget "PhotoFiltersTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +454,7 @@
 				D56C134719EC347D00BBA749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

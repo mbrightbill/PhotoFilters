@@ -66,9 +66,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPZ-l6-cgq">
-                                <rect key="frame" x="0.0" y="0.0" width="607" height="600"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kvL-3N-T3f">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPZ-l6-cgq">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kvL-3N-T3f">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -99,6 +99,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ylp-Iu-KDd" firstAttribute="top" secondItem="tPZ-l6-cgq" secondAttribute="bottom" id="5s9-dO-QQl"/>
+                            <constraint firstItem="tPZ-l6-cgq" firstAttribute="top" secondItem="xpX-LG-oVi" secondAttribute="top" constant="20" symbolic="YES" id="6qg-9V-Twj"/>
+                            <constraint firstAttribute="trailing" secondItem="tPZ-l6-cgq" secondAttribute="trailing" id="KuA-Vz-0VI"/>
+                            <constraint firstItem="tPZ-l6-cgq" firstAttribute="leading" secondItem="xpX-LG-oVi" secondAttribute="leading" id="jgF-GA-pvX"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="tPZ-l6-cgq" id="vZO-kE-DU0"/>
