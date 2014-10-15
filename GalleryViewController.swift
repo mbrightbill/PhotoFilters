@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol GalleryDelegate {
+@objc protocol GalleryDelegate {
     func didTapOnPicture(image : UIImage)
 }
 
@@ -16,7 +16,8 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var delegate: GalleryDelegate? // whatever this thing is, It will conform to this GalleryDelegate protocol
+    // strong reference by default, weak is better
+    weak var delegate: GalleryDelegate? // whatever this thing is, It will conform to this GalleryDelegate protocol
     
     var images = [UIImage]()
     

@@ -16,6 +16,10 @@
 		D56C133F19EC347D00BBA749 /* PhotoFiltersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C133E19EC347D00BBA749 /* PhotoFiltersTests.swift */; };
 		D56C134D19EC3C9C00BBA749 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */; };
 		D56C134F19EC422300BBA749 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C134E19EC422300BBA749 /* GalleryCell.swift */; };
+		D5DBB62919ED903C0081FCB3 /* FilterThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62819ED903C0081FCB3 /* FilterThumbnailCell.swift */; };
+		D5DBB62B19ED91770081FCB3 /* FilterThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62A19ED91770081FCB3 /* FilterThumbnail.swift */; };
+		D5DBB62D19EDA0610081FCB3 /* CoreDataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62C19EDA0610081FCB3 /* CoreDataSeeder.swift */; };
+		D5DBB63119EDA1A60081FCB3 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB63019EDA1A60081FCB3 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		D56C133E19EC347D00BBA749 /* PhotoFiltersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFiltersTests.swift; sourceTree = "<group>"; };
 		D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D56C134E19EC422300BBA749 /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		D5DBB62819ED903C0081FCB3 /* FilterThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterThumbnailCell.swift; sourceTree = "<group>"; };
+		D5DBB62A19ED91770081FCB3 /* FilterThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterThumbnail.swift; sourceTree = "<group>"; };
+		D5DBB62C19EDA0610081FCB3 /* CoreDataSeeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSeeder.swift; sourceTree = "<group>"; };
+		D5DBB63019EDA1A60081FCB3 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = ../Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				D56C132519EC347D00BBA749 /* AppDelegate.swift */,
+				D5DBB63019EDA1A60081FCB3 /* Filter.swift */,
 				D56C132F19EC347D00BBA749 /* Images.xcassets */,
 				D56C132719EC347D00BBA749 /* PhotoFilters.xcdatamodeld */,
 				D56C132319EC347D00BBA749 /* Supporting Files */,
@@ -122,6 +131,8 @@
 		D56C134819EC349500BBA749 /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D5DBB62A19ED91770081FCB3 /* FilterThumbnail.swift */,
+				D5DBB62C19EDA0610081FCB3 /* CoreDataSeeder.swift */,
 			);
 			name = "Model Layer";
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 			children = (
 				D56C133119EC347D00BBA749 /* LaunchScreen.xib */,
 				D56C134E19EC422300BBA749 /* GalleryCell.swift */,
+				D5DBB62819ED903C0081FCB3 /* FilterThumbnailCell.swift */,
 				D56C132C19EC347D00BBA749 /* Main.storyboard */,
 			);
 			name = "View Layer";
@@ -245,11 +257,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DBB62919ED903C0081FCB3 /* FilterThumbnailCell.swift in Sources */,
 				D56C132B19EC347D00BBA749 /* ViewController.swift in Sources */,
+				D5DBB62D19EDA0610081FCB3 /* CoreDataSeeder.swift in Sources */,
 				D56C134F19EC422300BBA749 /* GalleryCell.swift in Sources */,
 				D56C134D19EC3C9C00BBA749 /* GalleryViewController.swift in Sources */,
 				D56C132919EC347D00BBA749 /* PhotoFilters.xcdatamodeld in Sources */,
 				D56C132619EC347D00BBA749 /* AppDelegate.swift in Sources */,
+				D5DBB63119EDA1A60081FCB3 /* Filter.swift in Sources */,
+				D5DBB62B19ED91770081FCB3 /* FilterThumbnail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
