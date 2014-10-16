@@ -16,7 +16,7 @@
 		D56C133F19EC347D00BBA749 /* PhotoFiltersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C133E19EC347D00BBA749 /* PhotoFiltersTests.swift */; };
 		D56C134D19EC3C9C00BBA749 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */; };
 		D56C134F19EC422300BBA749 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C134E19EC422300BBA749 /* GalleryCell.swift */; };
-		D5C74BC419F064A60078FCB8 /* serverTest.js in Resources */ = {isa = PBXBuildFile; fileRef = D5C74BC319F064A60078FCB8 /* serverTest.js */; };
+		D5C74BC619F065430078FCB8 /* serverTest.js in Resources */ = {isa = PBXBuildFile; fileRef = D5C74BC519F065430078FCB8 /* serverTest.js */; };
 		D5DBB62919ED903C0081FCB3 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62819ED903C0081FCB3 /* ThumbnailCell.swift */; };
 		D5DBB62B19ED91770081FCB3 /* ThumbnailContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */; };
 		D5DBB66C19EF1B550081FCB3 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB66B19EF1B550081FCB3 /* Filter.swift */; };
@@ -48,7 +48,7 @@
 		D56C133E19EC347D00BBA749 /* PhotoFiltersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFiltersTests.swift; sourceTree = "<group>"; };
 		D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D56C134E19EC422300BBA749 /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
-		D5C74BC319F064A60078FCB8 /* serverTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = serverTest.js; path = ../../../../Desktop/serverTest.js; sourceTree = "<group>"; };
+		D5C74BC519F065430078FCB8 /* serverTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = serverTest.js; path = ../serverTest.js; sourceTree = "<group>"; };
 		D5DBB62819ED903C0081FCB3 /* ThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
 		D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailContainer.swift; sourceTree = "<group>"; };
 		D5DBB66B19EF1B550081FCB3 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		D5C74BC219F0648B0078FCB8 /* Server File */ = {
 			isa = PBXGroup;
 			children = (
-				D5C74BC319F064A60078FCB8 /* serverTest.js */,
+				D5C74BC519F065430078FCB8 /* serverTest.js */,
 			);
 			name = "Server File";
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 				D56C132E19EC347D00BBA749 /* Main.storyboard in Resources */,
 				D56C133319EC347D00BBA749 /* LaunchScreen.xib in Resources */,
 				D56C133019EC347D00BBA749 /* Images.xcassets in Resources */,
-				D5C74BC419F064A60078FCB8 /* serverTest.js in Resources */,
+				D5C74BC619F065430078FCB8 /* serverTest.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
