@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterThumbnailCell: UICollectionViewCell {
+class ThumbnailCell: UICollectionViewCell {
     // image view on top of cell outlet goes here
     @IBOutlet weak var imageViewThumbnail: UIImageView!
     
