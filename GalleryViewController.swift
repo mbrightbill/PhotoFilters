@@ -16,6 +16,8 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var flowLayout : UICollectionViewFlowLayout!
+    
     // strong reference by default, weak is better
     weak var delegate: GalleryDelegate? // whatever this thing is, It will conform to this GalleryDelegate protocol
     
@@ -42,8 +44,36 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         self.images.append(image6)
         self.images.append(image7)
         
-        
+        self.flowLayout = self.collectionView.collectionViewLayout as UICollectionViewFlowLayout
+        var pinch = UIPinchGestureRecognizer(target: self, action: "pinchAction:")
+        self.collectionView.addGestureRecognizer(pinch)
     }
+    
+    func pinchAction(pinch : UIPinchGestureRecognizer) {
+        
+        println("test 1")
+        
+        if pinch.state == UIGestureRecognizerState.Ended {
+            println("test 2")
+            println(pinch.velocity)
+            self.collectionView.performBatchUpdates({ () -> Void in
+                if pinch.velocity > 0 {
+                    if self.flowLayout.itemSize.width < 200.0 {
+                        self.flowLayout.itemSize = CGSize(width: self.flowLayout.itemSize.width * 2, height: self.flowLayout.itemSize.height * 2)
+                        println(self.flowLayout.itemSize.width)
+                    }
+                } else {
+                    if self.flowLayout.itemSize.width > 50.0 {
+                        self.flowLayout.itemSize = CGSize(width: self.flowLayout.itemSize.width * 0.5, height: self.flowLayout.itemSize.height * 0.5)
+                        println(self.flowLayout.itemSize.width)
+                    }
+                }
+            }, completion: nil)
+        }
+    }
+        
+        
+
 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -62,5 +92,5 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-   
 }
+

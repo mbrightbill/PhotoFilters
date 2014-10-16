@@ -22,8 +22,8 @@
                                 <color key="backgroundColor" red="0.46178608339999999" green="1" blue="0.34584859600000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF6-Wg-ugf">
-                                <rect key="frame" x="276" y="523" width="49" height="30"/>
-                                <state key="normal" title="Photos">
+                                <rect key="frame" x="273.5" y="523" width="54" height="30"/>
+                                <state key="normal" title="Options">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -82,6 +82,7 @@
                         <outlet property="thumbnailCollectionViewBottom" destination="fTc-Nl-dNk" id="Oue-hH-lhA"/>
                         <segue destination="G2U-MY-b17" kind="presentation" identifier="SHOW_GALLERY" id="guw-sU-end"/>
                         <segue destination="M1f-xt-tQ0" kind="presentation" identifier="SHOW_PHOTOS_FRAMEWORK" id="OMy-he-DQg"/>
+                        <segue destination="lDr-yq-cir" kind="presentation" identifier="SHOW_LIVE_CAMERA" id="HXx-yC-esD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,7 +148,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvI-gN-jX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="-852"/>
+            <point key="canvasLocation" x="935" y="-1028"/>
+        </scene>
+        <!--Foundation Camera View Controller-->
+        <scene sceneID="eA0-dh-6PA">
+            <objects>
+                <viewController id="lDr-yq-cir" customClass="AVFoundationCameraViewController" customModule="PhotoFilters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kKd-eY-Xo9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohg-jj-qWe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OX2-ey-Lxp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPN-OR-i05">
+                                <rect key="frame" x="107" y="28" width="386" height="368"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-A5-uYD">
+                                <rect key="frame" x="257" y="467" width="87" height="30"/>
+                                <state key="normal" title="Captah">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="capturePressed:" destination="lDr-yq-cir" eventType="touchUpInside" id="ElI-Xz-jrY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraPreviewImageView" destination="mPN-OR-i05" id="OUM-oa-rIR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ef0-td-RV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-678"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="dzT-jW-WOB">
@@ -207,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svb-I8-SFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795" y="540"/>
+            <point key="canvasLocation" x="935" y="588"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="91r-xF-LOe">

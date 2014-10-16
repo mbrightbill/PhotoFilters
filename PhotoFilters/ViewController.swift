@@ -136,6 +136,11 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
             let destinationVC = segue.destinationViewController as PhotosFrameworkViewController
             destinationVC.delegate = self
         }
+        
+        if segue.identifier == "SHOW_LIVE_CAMERA" {
+            let destinationVC = segue.destinationViewController as AVFoundationCameraViewController
+            destinationVC.delegate = self
+        }
     }
     
     
@@ -185,11 +190,16 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
             self.performSegueWithIdentifier("SHOW_PHOTOS_FRAMEWORK", sender: self)
         }
         
+        let liveCameraAction = UIAlertAction(title: "Live Camera", style: UIAlertActionStyle.Default) { (action) -> Void in
+            self.performSegueWithIdentifier("SHOW_LIVE_CAMERA", sender: self)
+        }
+        
         alertController.addAction(galleryAction)
         alertController.addAction(cancelAction)
         alertController.addAction(cameraAction)
-        alertController.addAction(filterAction)
         alertController.addAction(photosActions)
+        alertController.addAction(liveCameraAction)
+        alertController.addAction(filterAction)
         self.presentViewController(alertController, animated: true, completion: nil) // because we present it, a strong reference is stored, rather than the local variable just dying
     }
     

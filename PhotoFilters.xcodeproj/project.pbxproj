@@ -17,6 +17,7 @@
 		D56C134D19EC3C9C00BBA749 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */; };
 		D56C134F19EC422300BBA749 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C134E19EC422300BBA749 /* GalleryCell.swift */; };
 		D5C74BC619F065430078FCB8 /* serverTest.js in Resources */ = {isa = PBXBuildFile; fileRef = D5C74BC519F065430078FCB8 /* serverTest.js */; };
+		D5C74BC819F079E50078FCB8 /* AVFoundationCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C74BC719F079E50078FCB8 /* AVFoundationCameraViewController.swift */; };
 		D5DBB62919ED903C0081FCB3 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62819ED903C0081FCB3 /* ThumbnailCell.swift */; };
 		D5DBB62B19ED91770081FCB3 /* ThumbnailContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */; };
 		D5DBB66C19EF1B550081FCB3 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB66B19EF1B550081FCB3 /* Filter.swift */; };
@@ -49,9 +50,10 @@
 		D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D56C134E19EC422300BBA749 /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		D5C74BC519F065430078FCB8 /* serverTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = serverTest.js; path = ../serverTest.js; sourceTree = "<group>"; };
+		D5C74BC719F079E50078FCB8 /* AVFoundationCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationCameraViewController.swift; sourceTree = "<group>"; };
 		D5DBB62819ED903C0081FCB3 /* ThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
 		D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailContainer.swift; sourceTree = "<group>"; };
-		D5DBB66B19EF1B550081FCB3 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		D5DBB66B19EF1B550081FCB3 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = PhotoFilters/Filter.swift; sourceTree = "<group>"; };
 		D5DBB66D19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkViewController.swift; sourceTree = "<group>"; };
 		D5DBB66F19EF38850081FCB3 /* PhotosFrameworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +104,6 @@
 				D56C132519EC347D00BBA749 /* AppDelegate.swift */,
 				D56C132F19EC347D00BBA749 /* Images.xcassets */,
 				D56C132719EC347D00BBA749 /* PhotoFilters.xcdatamodeld */,
-				D5DBB66B19EF1B550081FCB3 /* Filter.swift */,
 				D56C132319EC347D00BBA749 /* Supporting Files */,
 			);
 			path = PhotoFilters;
@@ -136,6 +137,7 @@
 		D56C134819EC349500BBA749 /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D5DBB66B19EF1B550081FCB3 /* Filter.swift */,
 				D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */,
 			);
 			name = "Model Layer";
@@ -147,6 +149,7 @@
 				D56C134C19EC3C9C00BBA749 /* GalleryViewController.swift */,
 				D56C132A19EC347D00BBA749 /* ViewController.swift */,
 				D5DBB66D19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift */,
+				D5C74BC719F079E50078FCB8 /* AVFoundationCameraViewController.swift */,
 			);
 			name = "Controller Layer";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C74BC819F079E50078FCB8 /* AVFoundationCameraViewController.swift in Sources */,
 				D5DBB62919ED903C0081FCB3 /* ThumbnailCell.swift in Sources */,
 				D56C132B19EC347D00BBA749 /* ViewController.swift in Sources */,
 				D56C134F19EC422300BBA749 /* GalleryCell.swift in Sources */,
