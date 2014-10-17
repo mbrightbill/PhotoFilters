@@ -168,6 +168,7 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
         
         let alertController = UIAlertController(title: nil, message: "Choose an option", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
+        // define actions
         let galleryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) { (action) -> Void in
             //perform when this action gets called (upon selecting)
             self.performSegueWithIdentifier("SHOW_GALLERY", sender: self)
@@ -194,6 +195,7 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
             self.performSegueWithIdentifier("SHOW_LIVE_CAMERA", sender: self)
         }
         
+        // finalize alertController
         alertController.addAction(galleryAction)
         alertController.addAction(cancelAction)
         alertController.addAction(cameraAction)
@@ -205,9 +207,12 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         self.imageViewMain.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        self.resetThumbnails()
+        self.thumbnailCollectionView.reloadData()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // MARK: a;sdlfsd
     func didTapOnPicture(image : UIImage) {
         println("didTapOnPicture")
         self.imageViewMain.image = image
