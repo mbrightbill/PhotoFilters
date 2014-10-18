@@ -17,6 +17,8 @@ class AVFoundationCameraViewController: UIViewController {
 
     @IBOutlet weak var cameraPreviewImageView: UIImageView!
     
+    @IBOutlet weak var acceptButton: UIButton!
+    
     var delegate : GalleryDelegate?
     
     var stillImageOutput = AVCaptureStillImageOutput()
@@ -24,6 +26,8 @@ class AVFoundationCameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.acceptButton.hidden = true
+        
         var captureSession = AVCaptureSession()
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         var previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -53,6 +57,7 @@ class AVFoundationCameraViewController: UIViewController {
     
     @IBAction func capturePressed(sender: AnyObject) {
         var videoConnection : AVCaptureConnection?
+        self.acceptButton.hidden = false
         for connection in self.stillImageOutput.connections {
             if let cameraConnection = connection as? AVCaptureConnection {
                 for port in cameraConnection.inputPorts {
@@ -73,6 +78,12 @@ class AVFoundationCameraViewController: UIViewController {
             var image = UIImage(data : data)
             self.cameraPreviewImageView.image = image
         })
+    }
+    
+    
+    @IBAction func imageAccepted(sender: AnyObject) {
+        self.delegate?.didTapOnPicture(self.cameraPreviewImageView.image!)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
 

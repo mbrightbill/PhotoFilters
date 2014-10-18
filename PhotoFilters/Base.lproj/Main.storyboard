@@ -75,7 +75,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hF6-Wg-ugf" secondAttribute="bottom" constant="47" id="i5y-TW-a23"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E2i-Zp-7vM"/>
+                    <navigationItem key="navigationItem" id="E2i-Zp-7vM">
+                        <barButtonItem key="leftBarButtonItem" title="Save" id="8Dp-6h-uk8">
+                            <connections>
+                                <action selector="savePressed:" destination="BYZ-38-t0r" id="1Y0-cx-XQX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageViewMain" destination="ZIy-Z7-OmN" id="TmB-z0-IY7"/>
                         <outlet property="thumbnailCollectionView" destination="NtB-MF-tiU" id="L5N-5K-GCK"/>
@@ -162,11 +168,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPN-OR-i05">
-                                <rect key="frame" x="107" y="28" width="386" height="368"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-A5-uYD">
-                                <rect key="frame" x="257" y="467" width="87" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-A5-uYD">
+                                <rect key="frame" x="275" y="550" width="50" height="30"/>
                                 <state key="normal" title="Captah">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -174,10 +177,51 @@
                                     <action selector="capturePressed:" destination="lDr-yq-cir" eventType="touchUpInside" id="ElI-Xz-jrY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-Ks-K5J">
+                                <rect key="frame" x="45" y="437" width="49" height="30"/>
+                                <state key="normal" title="Accept">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imageAccepted:" destination="lDr-yq-cir" eventType="touchUpInside" id="ChR-ab-t2u"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPN-OR-i05">
+                                <rect key="frame" x="16" y="475" width="106" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="L7P-IA-guM"/>
+                                    <constraint firstAttribute="height" constant="105" id="elP-Hf-Tzm"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ohg-jj-qWe" firstAttribute="top" secondItem="nCM-A5-uYD" secondAttribute="bottom" constant="20" id="4m8-Gd-rwv"/>
+                            <constraint firstItem="mPN-OR-i05" firstAttribute="leading" secondItem="OX2-ey-Lxp" secondAttribute="leadingMargin" id="HuY-WC-l3e"/>
+                            <constraint firstItem="nCM-A5-uYD" firstAttribute="leading" secondItem="OX2-ey-Lxp" secondAttribute="leading" constant="257" id="MQp-XV-vQ9"/>
+                            <constraint firstAttribute="centerX" secondItem="nCM-A5-uYD" secondAttribute="centerX" id="Mhr-Wx-wRP"/>
+                            <constraint firstAttribute="trailing" secondItem="mPN-OR-i05" secondAttribute="trailing" constant="465" id="RW7-dh-0Ay"/>
+                            <constraint firstItem="mPN-OR-i05" firstAttribute="top" secondItem="T1n-Ks-K5J" secondAttribute="bottom" constant="8" id="aJL-Yg-cnv"/>
+                            <constraint firstItem="ohg-jj-qWe" firstAttribute="top" secondItem="mPN-OR-i05" secondAttribute="bottom" constant="20" id="cE8-0O-V9i"/>
+                            <constraint firstItem="mPN-OR-i05" firstAttribute="centerX" secondItem="T1n-Ks-K5J" secondAttribute="centerX" id="jC4-Fn-B68"/>
+                            <constraint firstItem="mPN-OR-i05" firstAttribute="leading" secondItem="OX2-ey-Lxp" secondAttribute="leading" constant="29" id="n3a-Mb-I0z"/>
+                            <constraint firstItem="mPN-OR-i05" firstAttribute="top" secondItem="kKd-eY-Xo9" secondAttribute="bottom" constant="409" id="r1N-CT-PZv"/>
+                            <constraint firstAttribute="trailing" secondItem="nCM-A5-uYD" secondAttribute="trailing" constant="256" id="uCS-Sv-Wcu"/>
+                            <constraint firstItem="ohg-jj-qWe" firstAttribute="top" secondItem="nCM-A5-uYD" secondAttribute="bottom" constant="103" id="zcu-bk-4Mf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RW7-dh-0Ay"/>
+                                <exclude reference="n3a-Mb-I0z"/>
+                                <exclude reference="r1N-CT-PZv"/>
+                                <exclude reference="zcu-bk-4Mf"/>
+                                <exclude reference="MQp-XV-vQ9"/>
+                                <exclude reference="uCS-Sv-Wcu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="acceptButton" destination="T1n-Ks-K5J" id="jF6-1e-HFj"/>
                         <outlet property="cameraPreviewImageView" destination="mPN-OR-i05" id="OUM-oa-rIR"/>
                     </connections>
                 </viewController>

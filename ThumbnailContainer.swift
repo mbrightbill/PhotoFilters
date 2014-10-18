@@ -16,12 +16,16 @@ class ThumbnailContainer {
     var gpuContext : CIContext
     var cifilter : CIFilter?
     var filterName : String
+    var inputRadius : Float?
+    var inputIntensity : Float?
     
-    init(filterName : String, thumbNail : UIImage, queue : NSOperationQueue, context : CIContext) {
+    init(filterName : String, thumbNail : UIImage, queue : NSOperationQueue, context : CIContext, inputRadius : NSNumber?, inputIntensity : NSNumber?) {
         self.filterName = filterName
         self.originalThumbnail = thumbNail
         self.imageQueue = queue
         self.gpuContext = context
+        self.inputRadius = inputRadius
+        self.inputIntensity = inputIntensity
         
     }
     
@@ -31,7 +35,15 @@ class ThumbnailContainer {
             
             // setting up your filter with a CIImage
             var image = CIImage(image: self.originalThumbnail)
-            var imgFilter = CIFilter(name: self.filterName) // "an initializer that just takes in a name"
+//            var imgFilter : CIFilter!
+//            if self.inputIntensity == nil {
+            var imgFilter = CIFilter(name: self.filterName)
+//            } else {
+//                var radiusString = "inputRadius" as NSString
+//                var intensityString = "inputIntensity" as NSString
+//                var imgFilter = CIFilter(name: self.filterName, withInputParameters: [radiusString: self.inputRadius, intensityString : self.inputIntensity])
+//            }
+            // "an initializer that just takes in a name"
             imgFilter.setDefaults()
             imgFilter.setValue(image, forKey: kCIInputImageKey)
         

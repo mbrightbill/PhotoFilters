@@ -19,10 +19,10 @@
 		D5C74BC819F079E50078FCB8 /* AVFoundationCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C74BC719F079E50078FCB8 /* AVFoundationCameraViewController.swift */; };
 		D5DBB62919ED903C0081FCB3 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62819ED903C0081FCB3 /* ThumbnailCell.swift */; };
 		D5DBB62B19ED91770081FCB3 /* ThumbnailContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */; };
-		D5DBB66C19EF1B550081FCB3 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB66B19EF1B550081FCB3 /* Filter.swift */; };
 		D5DBB66E19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB66D19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift */; };
 		D5DBB67019EF38850081FCB3 /* PhotosFrameworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB66F19EF38850081FCB3 /* PhotosFrameworkCell.swift */; };
 		D5EED52819F1AFD800E33ADE /* serverTest.js in Resources */ = {isa = PBXBuildFile; fileRef = D5EED52719F1AFD800E33ADE /* serverTest.js */; };
+		D5EED52E19F1D35B00E33ADE /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EED52D19F1D35B00E33ADE /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +52,10 @@
 		D5C74BC719F079E50078FCB8 /* AVFoundationCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationCameraViewController.swift; sourceTree = "<group>"; };
 		D5DBB62819ED903C0081FCB3 /* ThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
 		D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailContainer.swift; sourceTree = "<group>"; };
-		D5DBB66B19EF1B550081FCB3 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = PhotoFilters/Filter.swift; sourceTree = "<group>"; };
 		D5DBB66D19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkViewController.swift; sourceTree = "<group>"; };
 		D5DBB66F19EF38850081FCB3 /* PhotosFrameworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkCell.swift; sourceTree = "<group>"; };
 		D5EED52719F1AFD800E33ADE /* serverTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = serverTest.js; sourceTree = "<group>"; };
+		D5EED52D19F1D35B00E33ADE /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +105,7 @@
 				D56C132519EC347D00BBA749 /* AppDelegate.swift */,
 				D56C132F19EC347D00BBA749 /* Images.xcassets */,
 				D56C132719EC347D00BBA749 /* PhotoFilters.xcdatamodeld */,
+				D5EED52D19F1D35B00E33ADE /* Filter.swift */,
 				D56C132319EC347D00BBA749 /* Supporting Files */,
 			);
 			path = PhotoFilters;
@@ -138,7 +139,6 @@
 		D56C134819EC349500BBA749 /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
-				D5DBB66B19EF1B550081FCB3 /* Filter.swift */,
 				D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */,
 			);
 			name = "Model Layer";
@@ -231,6 +231,7 @@
 				TargetAttributes = {
 					D56C131F19EC347D00BBA749 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = W4PDJPG4TJ;
 					};
 					D56C133719EC347D00BBA749 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -285,6 +286,7 @@
 			files = (
 				D5C74BC819F079E50078FCB8 /* AVFoundationCameraViewController.swift in Sources */,
 				D5DBB62919ED903C0081FCB3 /* ThumbnailCell.swift in Sources */,
+				D5EED52E19F1D35B00E33ADE /* Filter.swift in Sources */,
 				D56C132B19EC347D00BBA749 /* ViewController.swift in Sources */,
 				D56C134F19EC422300BBA749 /* GalleryCell.swift in Sources */,
 				D5DBB67019EF38850081FCB3 /* PhotosFrameworkCell.swift in Sources */,
@@ -292,7 +294,6 @@
 				D56C134D19EC3C9C00BBA749 /* GalleryViewController.swift in Sources */,
 				D56C132919EC347D00BBA749 /* PhotoFilters.xcdatamodeld in Sources */,
 				D56C132619EC347D00BBA749 /* AppDelegate.swift in Sources */,
-				D5DBB66C19EF1B550081FCB3 /* Filter.swift in Sources */,
 				D5DBB62B19ED91770081FCB3 /* ThumbnailContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,9 +421,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhotoFilters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -430,9 +434,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhotoFilters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

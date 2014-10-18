@@ -10,9 +10,12 @@ import UIKit
 import CoreImage
 import OpenGLES
 import CoreData
+import Photos
 
 
 class ViewController: UIViewController, GalleryDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    var assetCollection = PHAssetCollection()
     
     var managedObjectContext : NSManagedObjectContext!
     var originalThumbnail : UIImage?
@@ -93,6 +96,11 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
         var photoEffectTonal = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
         photoEffectTonal.name = "CIPhotoEffectTonal"
         
+//        var bloom = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+//        bloom.name = "CIBloom"
+//        bloom.inputRadius = 10.0 as Float
+//        bloom.inputIntensity = 1.00 as Float
+        
         var error : NSError?
         self.managedObjectContext.save(&error)
         
@@ -118,7 +126,7 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
         var newThumbnailContainers = [ThumbnailContainer]()
         for var index = 0; index < self.filters?.count; ++index {
             let filter = self.filters![index]
-            var thumbnailContainers = ThumbnailContainer(filterName: filter.name, thumbNail: self.originalThumbnail!, queue: self.imageQueue, context: self.gpuContext!)
+            var thumbnailContainers = ThumbnailContainer(filterName: filter.name, thumbNail: self.originalThumbnail!, queue: self.imageQueue, context: self.gpuContext!, inputRadius : filter.inputRadius, inputIntensity : filter.inputIntensity)
             newThumbnailContainers.append(thumbnailContainers)
         }
         self.thumbnailContainers = newThumbnailContainers
@@ -248,6 +256,34 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
             })
         }
         return cell
+    }
+    
+    
+    func addNewAssetWithImage(image : UIImage, toAlbum album: PHAssetCollection) {
+        
+        PHPhotoLibrary.sharedPhotoLibrary().performChanges({ () -> Void in
+            
+            // Request creating an asset from the image.
+            let createAssetRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(image)
+            
+            // Request editing the album
+            let albumChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: album)
+            
+            // Get a placeholder for the new asset and add it to the album editing request.
+            let assetPlaceholder = createAssetRequest.placeholderForCreatedAsset
+            albumChangeRequest.addAssets([assetPlaceholder])
+            
+            
+            
+        }, completionHandler: {  success, error in
+            NSLog("Finished editing asset.", (success ? "Success" : error))
+        })
+    }
+    
+    @IBAction func savePressed(sender: AnyObject) {
+        if self.imageViewMain.image != nil {
+            self.addNewAssetWithImage(self.imageViewMain.image!, toAlbum: assetCollection)
+        }
     }
     
     
