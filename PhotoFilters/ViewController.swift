@@ -195,7 +195,7 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
             self.enterFilterMode()
         }
         
-        let photosActions = UIAlertAction(title: "Photos Framework", style: UIAlertActionStyle.Default) { (action) -> Void in
+        let photosActions = UIAlertAction(title: "Photos on Device", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.performSegueWithIdentifier("SHOW_PHOTOS_FRAMEWORK", sender: self)
         }
         
