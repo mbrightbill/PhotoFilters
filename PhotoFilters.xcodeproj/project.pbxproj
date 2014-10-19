@@ -54,6 +54,7 @@
 		D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailContainer.swift; sourceTree = "<group>"; };
 		D5DBB66D19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkViewController.swift; sourceTree = "<group>"; };
 		D5DBB66F19EF38850081FCB3 /* PhotosFrameworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkCell.swift; sourceTree = "<group>"; };
+		D5DECD5E19F34F42001B98A1 /* LinkedListwithGenerics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LinkedListwithGenerics.playground; sourceTree = "<group>"; };
 		D5EED52719F1AFD800E33ADE /* serverTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = serverTest.js; sourceTree = "<group>"; };
 		D5EED52D19F1D35B00E33ADE /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +179,7 @@
 		D5C74BC919F088BE0078FCB8 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				D5DECD5E19F34F42001B98A1 /* LinkedListwithGenerics.playground */,
 			);
 			name = Playgrounds;
 			sourceTree = "<group>";
