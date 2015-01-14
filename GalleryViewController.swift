@@ -36,13 +36,13 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         var image6 = UIImage(named: "photo7.jpg")
         var image7 = UIImage(named: "photo8.jpg")
         
-        self.images.append(image1)
-        self.images.append(image2)
-        self.images.append(image3)
-        self.images.append(image4)
-        self.images.append(image5)
-        self.images.append(image6)
-        self.images.append(image7)
+        self.images.append(image1!)
+        self.images.append(image2!)
+        self.images.append(image3!)
+        self.images.append(image4!)
+        self.images.append(image5!)
+        self.images.append(image6!)
+        self.images.append(image7!)
         
         self.flowLayout = self.collectionView.collectionViewLayout as UICollectionViewFlowLayout
         var pinch = UIPinchGestureRecognizer(target: self, action: "pinchAction:")

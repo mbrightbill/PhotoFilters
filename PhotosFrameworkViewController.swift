@@ -68,7 +68,7 @@ class PhotosFrameworkViewController: UIViewController, UICollectionViewDataSourc
             
             var image = UIImage(data: data)
             
-            self.delegate?.didTapOnPicture(image)
+            self.delegate?.didTapOnPicture(image!)
             
             self.dismissViewControllerAnimated(true, completion: nil)
             
