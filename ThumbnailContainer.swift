@@ -16,8 +16,8 @@ class ThumbnailContainer {
     var gpuContext : CIContext
     var cifilter : CIFilter?
     var filterName : String
-    var inputRadius : Float?
-    var inputIntensity : Float?
+    var inputRadius : NSNumber?
+    var inputIntensity : NSNumber?
     
     init(filterName : String, thumbNail : UIImage, queue : NSOperationQueue, context : CIContext, inputRadius : NSNumber?, inputIntensity : NSNumber?) {
         self.filterName = filterName

@@ -21,7 +21,6 @@
 		D5DBB62B19ED91770081FCB3 /* ThumbnailContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB62A19ED91770081FCB3 /* ThumbnailContainer.swift */; };
 		D5DBB66E19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB66D19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift */; };
 		D5DBB67019EF38850081FCB3 /* PhotosFrameworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB66F19EF38850081FCB3 /* PhotosFrameworkCell.swift */; };
-		D5EED52819F1AFD800E33ADE /* serverTest.js in Resources */ = {isa = PBXBuildFile; fileRef = D5EED52719F1AFD800E33ADE /* serverTest.js */; };
 		D5EED52E19F1D35B00E33ADE /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EED52D19F1D35B00E33ADE /* Filter.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		D5DBB66D19EF36CF0081FCB3 /* PhotosFrameworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkViewController.swift; sourceTree = "<group>"; };
 		D5DBB66F19EF38850081FCB3 /* PhotosFrameworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkCell.swift; sourceTree = "<group>"; };
 		D5DECD5E19F34F42001B98A1 /* LinkedListwithGenerics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LinkedListwithGenerics.playground; sourceTree = "<group>"; };
-		D5EED52719F1AFD800E33ADE /* serverTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = serverTest.js; sourceTree = "<group>"; };
 		D5EED52D19F1D35B00E33ADE /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +169,6 @@
 		D5C74BC219F0648B0078FCB8 /* Server File */ = {
 			isa = PBXGroup;
 			children = (
-				D5EED52719F1AFD800E33ADE /* serverTest.js */,
 			);
 			name = "Server File";
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 				D56C132E19EC347D00BBA749 /* Main.storyboard in Resources */,
 				D56C133319EC347D00BBA749 /* LaunchScreen.xib in Resources */,
 				D56C133019EC347D00BBA749 /* Images.xcassets in Resources */,
-				D5EED52819F1AFD800E33ADE /* serverTest.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
