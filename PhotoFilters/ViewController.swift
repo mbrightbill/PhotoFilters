@@ -44,7 +44,7 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
         self.gpuContext = CIContext(EAGLContext: myEAGLContext, options: options)
         
         
-        var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.managedObjectContext = appDelegate.managedObjectContext
         
         let fetchRequest = NSFetchRequest(entityName: "Filter")
@@ -65,35 +65,35 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
     }
     
     func seedCoreData() {
-        var sepia = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var sepia = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         sepia.name = "CISepiaTone"
         
-        var gaussianBlur = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var gaussianBlur = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         gaussianBlur.name = "CIGaussianBlur"
         gaussianBlur.favorited = true
         
-        var pixellate = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var pixellate = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         pixellate.name = "CIPixellate"
         
-        var gammaAdjust = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var gammaAdjust = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         gammaAdjust.name = "CIGammaAdjust"
         
-        var exposureAdjust = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var exposureAdjust = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         exposureAdjust.name = "CIExposureAdjust"
         
-        var photoEffectChrome = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var photoEffectChrome = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         photoEffectChrome.name = "CIPhotoEffectChrome"
         
-        var photoEffectInstant = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var photoEffectInstant = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         photoEffectInstant.name = "CIPhotoEffectInstant"
         
-        var photoEffectMono = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var photoEffectMono = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         photoEffectMono.name = "CIPhotoEffectMono"
         
-        var photoEffectNoir = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var photoEffectNoir = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         photoEffectNoir.name = "CIPhotoEffectNoir"
         
-        var photoEffectTonal = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
+        var photoEffectTonal = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as! Filter
         photoEffectTonal.name = "CIPhotoEffectTonal"
         
 //        var bloom = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
@@ -136,17 +136,17 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
     //prepare for segue outside of any selecting
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SHOW_GALLERY" {
-            let destinationVC = segue.destinationViewController as GalleryViewController
+            let destinationVC = segue.destinationViewController as! GalleryViewController
             destinationVC.delegate = self
         }
         
         if segue.identifier == "SHOW_PHOTOS_FRAMEWORK" {
-            let destinationVC = segue.destinationViewController as PhotosFrameworkViewController
+            let destinationVC = segue.destinationViewController as! PhotosFrameworkViewController
             destinationVC.delegate = self
         }
         
         if segue.identifier == "SHOW_LIVE_CAMERA" {
-            let destinationVC = segue.destinationViewController as AVFoundationCameraViewController
+            let destinationVC = segue.destinationViewController as! AVFoundationCameraViewController
             destinationVC.delegate = self
         }
     }
@@ -242,7 +242,7 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = thumbnailCollectionView.dequeueReusableCellWithReuseIdentifier("THUMBNAIL_CELL", forIndexPath: indexPath) as ThumbnailCell
+        let cell = thumbnailCollectionView.dequeueReusableCellWithReuseIdentifier("THUMBNAIL_CELL", forIndexPath: indexPath) as! ThumbnailCell
         let thumbnailContainer = self.thumbnailContainers[indexPath.row]
         // lazy loading
         if thumbnailContainer.filteredThumbnail != nil {

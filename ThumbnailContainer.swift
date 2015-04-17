@@ -48,7 +48,7 @@ class ThumbnailContainer {
             imgFilter.setValue(image, forKey: kCIInputImageKey)
         
             //generate results
-            var result = imgFilter.valueForKey(kCIOutputImageKey) as CIImage
+            var result = imgFilter.valueForKey(kCIOutputImageKey) as! CIImage
             var extent = result.extent()
             var imgRef = self.gpuContext.createCGImage(result, fromRect: extent)
             self.cifilter = imgFilter
