@@ -36,7 +36,7 @@ class AVFoundationCameraViewController: UIViewController {
         
         var device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         var error : NSError?
-        var input = AVCaptureDeviceInput.deviceInputWithDevice(device, error: &error) as AVCaptureDeviceInput!
+        var input = AVCaptureDeviceInput.deviceInputWithDevice(device, error: &error) as! AVCaptureDeviceInput!
         if input == nil {
             println("no input")
         }

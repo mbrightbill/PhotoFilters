@@ -44,7 +44,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         self.images.append(image6!)
         self.images.append(image7!)
         
-        self.flowLayout = self.collectionView.collectionViewLayout as UICollectionViewFlowLayout
+        self.flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         var pinch = UIPinchGestureRecognizer(target: self, action: "pinchAction:")
         self.collectionView.addGestureRecognizer(pinch)
     }
@@ -80,7 +80,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         return self.images.count
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GALLERY_CELL", forIndexPath: indexPath) as GalleryCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GALLERY_CELL", forIndexPath: indexPath) as! GalleryCell
         cell.imageView.image = self.images[indexPath.row]
         return cell
         

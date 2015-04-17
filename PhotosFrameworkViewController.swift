@@ -33,7 +33,7 @@ class PhotosFrameworkViewController: UIViewController, UICollectionViewDataSourc
         
         // Determine device scale, adjust asset cell size
         var scale = UIScreen.mainScreen().scale
-        var flowLayout = self.photosFrameworkCollectionView.collectionViewLayout as UICollectionViewFlowLayout
+        var flowLayout = self.photosFrameworkCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
         var cellSize = flowLayout.itemSize
         self.assetCellSize = CGSizeMake(cellSize.width * scale, cellSize.height * scale)
@@ -45,12 +45,12 @@ class PhotosFrameworkViewController: UIViewController, UICollectionViewDataSourc
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = photosFrameworkCollectionView.dequeueReusableCellWithReuseIdentifier("PHOTOS_CELL", forIndexPath: indexPath) as PhotosFrameworkCell
+        let cell = photosFrameworkCollectionView.dequeueReusableCellWithReuseIdentifier("PHOTOS_CELL", forIndexPath: indexPath) as! PhotosFrameworkCell
         
         var currentTag = cell.tag + 1
         cell.tag = currentTag
         
-        var asset = self.assetFetchResults[indexPath.row] as PHAsset
+        var asset = self.assetFetchResults[indexPath.row] as! PHAsset
         
         self.imageManager.requestImageForAsset(asset, targetSize: self.assetCellSize, contentMode: PHImageContentMode.AspectFill, options: nil) { (image, info) -> Void in
             if cell.tag == currentTag {
@@ -62,7 +62,7 @@ class PhotosFrameworkViewController: UIViewController, UICollectionViewDataSourc
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        var asset = self.assetFetchResults[indexPath.row] as PHAsset
+        var asset = self.assetFetchResults[indexPath.row] as! PHAsset
         
         self.imageManager.requestImageDataForAsset(asset, options: nil) { (data : NSData!, string : String!, orientation : UIImageOrientation, object ) -> Void in
             
