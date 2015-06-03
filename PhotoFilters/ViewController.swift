@@ -220,7 +220,6 @@ class ViewController: UIViewController, GalleryDelegate, UIImagePickerController
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    // MARK: a;sdlfsd
     func didTapOnPicture(image : UIImage) {
         println("didTapOnPicture")
         self.imageViewMain.image = image
